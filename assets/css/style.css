@@ -1,0 +1,13 @@
+.display-4 {
+    height: 40px;
+    font-size: 30pt;
+    vertical-align: middle;
+}
+
+#instructions {
+    height: 20px;
+}
+
+.jumbotron {
+    margin: 0px;
+}
