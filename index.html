@@ -9,7 +9,93 @@
     <link rel="stylesheet" href="assets/css/style.css"></head>
 
 <body>
-    
+
+    <!--NavBar Begins-->
+        <nav id="Nav" class="navbar navbar-light bg-light">
+            <span id="Title" class="navbar-text">Interactive Quiz Application</span>
+            <span id="by" class="navbar-text">by Mario Cortes</span>
+        </nav>
+    <!--NavBar Ends-->
+
+
+    <!--Container Begins-->
+        <div style="margin-bottom: 20px;" class="container">
+
+            <div class="row">
+                
+                <div class="span-12"> 
+                <div class="jumbotron" style="width: 100%;">
+                    <h1 class="display-4">Welcome to my Interactive Quiz App!</h1>
+                    <p id="jumbolead" class="lead">This application will play an interactive quiz based on a pre-loaded question bank.</p>
+                    <hr class="my-4">
+                    <p id="instructions">You can select 1 of the quizzes shown below. The high scores for each quiz are also displayed. Once you make your selection, click on the 'Start Quiz' button to begin.</p>
+                </div>
+                </div>
+
+            </div>
+
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <div class="btn-group btn-group-toggle btn-group-vertical" data-toggle="buttons" style="width: 100%;" >
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="option1" autocomplete="off"> Facts about Mario
+                            </label>
+                            <label class="btn btn-secondary">
+                              <input type="radio" name="options" id="option2" autocomplete="off"> Facts about California
+                            </label>
+                            <label class="btn btn-secondary">
+                              <input type="radio" name="options" id="option3" autocomplete="off"> Facts about Mexico
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="option1" autocomplete="off"> Coding Knowledge
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="option2" autocomplete="off"> HTML Knowledge
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="option3" autocomplete="off"> JS Knowledge
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" style="background-color: lightblue;">
+                        <p>Quiz Description Placeholder</p>
+                    </div>
+
+                    <div class="col-md-4" style="background-color: lightcoral;">
+                        <p>High Scores Placeholder</p>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <button id="btn" type="button" class="btn btn-primary btn-lg btn-block">
+                        Begin Quiz
+                    </button>
+
+                </div>
+        </div>
+    <!--Container Ends-->
+
+    <!--Footer Begins-->
+    <style>.footer{
+            position: fixed;
+            left: 0px;
+            bottom: 0px;
+            width: 100%;
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            margin: 0;
+            font-size: 8pt;
+            line-height: 15px;
+            padding: 5px 0px;
+            }                 
+    </style>
+        <p class="footer">Copyright &copy;</p>
+    <!--Footer Ends-->
 
     <script src="script.js"></script>
     <script src="assets/quizfiles/mario.js"></script>
