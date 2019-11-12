@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Quiz App</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css"></head>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
 
 <body>
 
@@ -18,71 +20,77 @@
     <!--NavBar Ends-->
 
 
-    <!--Container Begins-->
-        <div style="margin-bottom: 20px;" class="container">
-
-            <div class="row">
-                
-                <div class="jumbotron" style="width: 100%;">
-                    <h1 class="display-4">Welcome to my Interactive Quiz App!</h1>
-                    <p id="jumbolead" class="lead">This application will play an interactive quiz based on a pre-loaded question bank.</p>
-                    <hr class="my-4">
-                    <p id="instructions">You can select 1 of the quizzes shown below. The high scores for each quiz are also displayed. Once you make your selection, click on the 'Start Quiz' button to begin.</p>
-                </div>
-
-            </div>
-
-                <div class="row">
-
-                    <div class="col-md-12">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons" style="width: 100%;" >
-                            <label class="btn btn-secondary">
-                                <input type="radio" name="options" id="option1" autocomplete="off"> Facts about Mario
-                            </label>
-                            <label class="btn btn-secondary">
-                              <input type="radio" name="options" id="option2" autocomplete="off"> Facts about California
-                            </label>
-                            <label class="btn btn-secondary">
-                              <input type="radio" name="options" id="option3" autocomplete="off"> Facts about Mexico
-                            </label>
-                            <label class="btn btn-secondary">
-                                <input type="radio" name="options" id="option1" autocomplete="off"> Coding Knowledge
-                            </label>
-                            <label class="btn btn-secondary">
-                                <input type="radio" name="options" id="option2" autocomplete="off"> HTML Knowledge
-                            </label>
-                            <label class="btn btn-secondary">
-                                <input type="radio" name="options" id="option3" autocomplete="off"> JS Knowledge
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                    <div class="row">
-
-                        <div class="col-md-12" style="background-color: lightblue;">
-                            <p>Quiz Description Placeholder</p>
-                        </div>
-
-                    </div>
-
-                        <div class="row">
-
-                            <div class="col-md-4" style="background-color: lightcoral;">
-                                <p>High Scores Placeholder</p>
-                            </div>
-
-                        </div>
-
-                            <div class="row">
-
-                                <button id="btn" type="button" class="btn btn-primary btn-lg btn-block">
-                                    Begin Quiz
-                                </button>
-
-                            </div>
+    <!--Header Begins-->
+        <div id="Header">
+        <h1>Welcome to my Interactive Quiz App!</h1>
+        <p>This application will play an interactive quiz based on a pre-loaded question bank.</p>
+        <p>You can select 1 of the quizzes shown below. The high scores for each quiz are also displayed. Once you make your selection, click on the 'Start Quiz' button to begin.</p>
         </div>
-    <!--Container Ends-->
+    <!--Header Ends-->
+
+    <!--Button Container Begins-->
+            <div id="btnGroup">
+                <input type="radio" name="options" id="option1" autocomplete="off"> Facts about Mario
+                <input type="radio" name="options" id="option2" autocomplete="off"> Facts about California
+                <input type="radio" name="options" id="option3" autocomplete="off"> Facts about Mexico
+                <input type="radio" name="options" id="option4" autocomplete="off"> Coding Knowledge
+                <input type="radio" name="options" id="option5" autocomplete="off"> HTML Knowledge
+                <input type="radio" name="options" id="option6" autocomplete="off"> JS Knowledge
+
+                    <div id="description">
+                        <p id="descMsg">Quiz Description</p>
+                    </div>
+            </div>
+    <!--Button Container Ends-->
+
+    <!--Main Content Section Begins-->
+                <div id="mainCont">
+                    <!--High Score Section Begins-->
+                    <div id="highScoresCont">
+                        <h4>High Scores</h4>
+                        <ol>
+                            <li>1</li>
+                            <li>2</li>
+                        </ol>
+                    </div>
+                    <!--High Score Section Ends-->
+
+                        <!--Quiz Section Begins-->   
+                        <div id="quizCont" >
+                            <div id="quizHeader">
+                                <button type="button">Start Quiz</button>
+                                <span>Score:</span><span>0</span>
+                                <span>Time Remaining:</span><span>0</span><span>Seconds</span>
+                            </div>
+
+                                <div>
+                                    <div>
+                                        <p id="question">Placeholder</p>
+                                    </div>
+                                        <div id="options">
+                                            <ol>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                                <li>4</li>
+                                            </ol>
+                                        </div>
+                                            <div id="result">
+                                                <img src="#"><span>Result</span>
+                                            </div>
+                                </div>
+                        </div> 
+                        <!--Quiz Section Ends-->
+
+                            <!--Save Score Begins-->
+                            <div id="saveScore">
+                                <span>Initials Placeholder</span><input type="text">
+                            </div>
+                            <!--Save Score Ends-->
+                </div>
+
+    <!--Main Content Section Ends-->
+
 
     <!--Footer Begins-->
     <style>.footer{
