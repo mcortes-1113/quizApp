@@ -30,15 +30,15 @@
 
     <!--Button Container Begins-->
             <div id="btnGroup">
-                <input type="radio" name="options" id="option1" autocomplete="off"> Facts about Mario
-                <input type="radio" name="options" id="option2" autocomplete="off"> Facts about California
-                <input type="radio" name="options" id="option3" autocomplete="off"> Facts about Mexico
-                <input type="radio" name="options" id="option4" autocomplete="off"> Coding Knowledge
-                <input type="radio" name="options" id="option5" autocomplete="off"> HTML Knowledge
-                <input type="radio" name="options" id="option6" autocomplete="off"> JS Knowledge
+                <input type="radio" class="quizOptions" name="options" id="q1" autocomplete="off" value="q1"> Facts about Mario
+                <input type="radio" class="quizOptions" name="options" id="q2" autocomplete="off" value="q2"> Facts about California
+                <input type="radio" class="quizOptions" name="options" id="q3" autocomplete="off" value="q3"> Facts about Mexico
+                <input type="radio" class="quizOptions" name="options" id="q4" autocomplete="off" value="q4"> Coding Knowledge
+                <input type="radio" class="quizOptions" name="options" id="q5" autocomplete="off" value="q5"> HTML Knowledge
+                <input type="radio" class="quizOptions" name="options" id="q6" autocomplete="off" value="q6"> JS Knowledge
 
                     <div id="description">
-                        <p id="descMsg">Quiz Description</p>
+                        <p id="descMsg">Description Placeholder</p>
                     </div>
             </div>
     <!--Button Container Ends-->
@@ -58,9 +58,11 @@
                         <!--Quiz Section Begins-->   
                         <div id="quizCont" >
                             <div id="quizHeader">
-                                <button type="button">Start Quiz</button>
+                                <button id="startBtn" type="button">Start Quiz</button>
                                 <span>Score:</span><span>0</span>
-                                <span>Time Remaining:</span><span>0</span><span>Seconds</span>
+                                <div id="timerInfo">
+                                <span>Time Remaining:</span><span id="timer">0</span><span>Seconds Left</span>
+                                </div>
                             </div>
 
                                 <div>
@@ -112,11 +114,12 @@
 
     <script src="script.js"></script>
     <script src="assets/quizfiles/mario.js"></script>
-    <script src="assets/quizfiles/california.js"></script>
     <script src="assets/quizfiles/mexico.js"></script>
-    <script src="assets/quizfiles/html.js"></script>
+    <!--<script src="assets/quizfiles/html.js"></script>
     <script src="assets/quizfiles/code.js"></script>
     <script src="assets/quizfiles/js.js"></script>
+    <script src="assets/quizfiles/california.js"></script>-->
+
 
 </body>
 </html>
