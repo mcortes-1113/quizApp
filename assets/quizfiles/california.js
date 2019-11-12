@@ -1,3 +1,5 @@
+var qbCaliforniaDesc = "This quiz will test your knowledge about California";
+
 var qbCalifornia = [
 
     {

@@ -1,3 +1,4 @@
+var qbMexicoDesc = "This quiz will test your knowledge about Mexico";
 var qbMexico = [
 
     {

@@ -1,3 +1,5 @@
+var qbJSDesc = "This quiz will test your knowledge about javascript";
+
 var qbJS = [
 
     {

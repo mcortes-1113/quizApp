@@ -1,3 +1,4 @@
+var qbMarioDesc = "This quiz includes facts about Mario";
 var qbMario = [
     
     {

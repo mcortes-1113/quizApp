@@ -1,3 +1,5 @@
+var qbCodingDesc = "This quiz will test your knowledge about Coding";
+
 var qbCoding = [
 
     {
