@@ -6,6 +6,7 @@ var secondsElapsed = 0;
 var secondsRemain;
 var interval;
 //display variables
+var currentQuiz;
 var currentQ;
 var currentCh;
 var currentA;
@@ -132,73 +133,38 @@ $(".quizOptions").on("click", function() {
     var selectedQuiz = $(".quizOptions:checked").val();
 
     if (selectedQuiz === "q1") {   
-        currentQ = qbMario[0].title;
-        currentCh = qbMario[0].choices;  
-        $("#descMsg").text(qbMarioDesc);
-        $("#question").text(currentQ)
-        $("#options").text(currentCh);
         secondsTotal = 4;
-
+        currentQuiz = qbMario;
     }
-
     else
-
         if (selectedQuiz === "q2") {
-            currentQ = qbCalifornia[0].title;
-            currentCh = qbCalifornia[0].choices;  
-            $("#descMsg").text(qbCaliforniaDesc);
-            $("#question").text(currentQ)
-            $("#options").text(currentCh);
             secondsTotal = 4;
+            currentQuiz = qbCalifornia;
         }
-    
-    else
-
+        else
             if (selectedQuiz === "q3") {
-                currentQ = qbMexico[0].title;
-                currentCh = qbMexico[0].choices;  
-                $("#descMsg").text(qbMexicoDesc);
-                $("#question").text(currentQ)
-                $("#options").text(currentCh);
                 secondsTotal = 4;
-
+                currentQuiz = qbMexico;
             }
-            
-    else
-
+            else
                 if (selectedQuiz === "q4") {
-                    currentQ = qbCoding[0].title;
-                    currentCh = qbCoding[0].choices; 
-                    $("#descMsg").text(qbCodingDesc);
-                    $("#question").text(currentQ)
-                    $("#options").text(currentCh);
                     secondsTotal = 4;
+                    currentQuiz = qbCoding;
                 }
-
     else
-
                     if (selectedQuiz === "q5") {
-                        currentQ = qbHTML[0].title;
-                        currentCh = qbHTML[0].choices; 
-                        $("#descMsg").text(qbHTMLDesc);
-                        $("#question").text(currentQ)
-                        $("#options").text(currentCh);
                         secondsTotal = 4;
+                        currentQuiz = qbHTML;
                     }
-    
-    else
-
+        else
                         if (selectedQuiz === "q6") {
-                            currentQ = qbJS[0].title;
-                            currentCh = qbJS[0].choices; 
-                            $("#descMsg").text(qbJSDesc);
-                            $("#question").text(currentQ)
-                            $("#options").text(currentCh);
                             secondsTotal = 4;
+                            currentQuiz = qbJS;
                         }
 });
 
 $("#startBtn").on("click", function() {
+    populateFirstQuestion();
     $("#timer").text(secondsTotal);
     interval = setInterval(function() {
     secondsElapsed++;
@@ -207,9 +173,25 @@ $("#startBtn").on("click", function() {
     }, 1000); 
 });
 
-currentQ = qbMario[0].title;
-currentCh = qbMario[0].choices;
-currentA = qbMario[0].answer;
+function populateFirstQuestion() {
+
+        currentQ = currentQuiz[0].title;
+        $("#question").text(currentQ);
+
+        for (chi=0;chi<currentQuiz.length;chi++) {
+            currentCh = currentQuiz[0].choices[chi];
+            $("#choices").append($("<li><button>" + currentCh + "</button></li>")).find('button').addClass('choice-button');
+                }
+};
+
+/*function validateAnswer() {
+    $(".choice-button").on("click", function() {
+        if (this.text === currentA) {
+            $("#result").text("Correct")
+
+        }
+    })
+}*/
 
 function renderTime() {
     $("#timer").text(secondsRemain);
